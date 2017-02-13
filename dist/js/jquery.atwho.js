@@ -597,7 +597,7 @@ TextareaController = (function(superClass) {
 
   TextareaController.prototype.rect = function() {
     var c, iframeOffset, scaleBottom;
-    if (!(c = this.$inputor.caret('offset', this.pos - 1, {
+    if (!(c = this.$inputor.caret('offset', ((this.pos == 0) ? 0 : this.pos - 1), {
       iframe: this.app.iframe
     }))) {
       return;
